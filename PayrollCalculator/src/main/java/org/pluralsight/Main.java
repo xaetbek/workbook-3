@@ -25,7 +25,7 @@ public class Main {
 
             String line;
             // read each line until there is no more data
-            while((line = bufReader.readLine()) != null){
+            while((line = bufReader.readLine()) != null) {
                 // Split the line into parts, using comma as the separator
                 String[] tokens = line.split(Pattern.quote("|"));
 
@@ -37,21 +37,15 @@ public class Main {
                     double payRate = Double.parseDouble(tokens[3]);     // Convert stock to an integer
 
                     Employee employee = new Employee(employeeId, name, hoursWorked, payRate);
-                    employeeList.add(employee);                      //load the Employee object onto the ArrayList for Employee
+                    System.out.printf("ID: %d, Name: %s, Gross Pay: $%.2f%n",
+                            employee.getEmployeeId(),
+                            employee.getName(),
+                            employee.getGrossPay());
                 }
             }
             bufReader.close();
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }
-
-        public void printEmployeeInfo() {                                                                    //method to print employee info in a specific format
-            System.out.println("Printing Employee Information:");
-            System.out.println();
-            for (Employee employee : employeeList) {                                                           //for-each loop to iterate through
-                System.out.printf("ID: %d|\tName: %s|\nGross Pay: %.2f\n\n",
-                        employee.getEmployeeId(), employee.getName(), employee.getGrossPay()); //print out with format so doubles are formatted as floats
-            }
         }
     }
 }
