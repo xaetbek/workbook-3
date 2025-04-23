@@ -22,14 +22,14 @@ public class ProductReader {
             // Read each remaining line in the file
             while ((line = reader.readLine()) != null) {
                 // Split the line into parts, using comma as the separator
-                String[] parts = line.split(",");
+                String[] tokens = line.split(",");
 
                 // Check if the line has exactly 4 parts (id, name, price, stock)
-                if (parts.length == 4) {
-                    int id = Integer.parseInt(parts[0]);        // Convert the first part to an integer (ID)
-                    String name = parts[1];                     // Get the name as text
-                    double price = Double.parseDouble(parts[2]); // Convert price to a decimal number
-                    int stock = Integer.parseInt(parts[3]);     // Convert stock to an integer
+                if (tokens.length == 4) {
+                    int id = Integer.parseInt(tokens[0]);        // Convert the first part to an integer (ID)
+                    String name = tokens[1];                     // Get the name as text
+                    double price = Double.parseDouble(tokens[2]); // Convert price to a decimal number
+                    int stock = Integer.parseInt(tokens[3]);     // Convert stock to an integer
 
                     // Create a new Product object using the parts
                     Product p = new Product(id, name, price, stock);
