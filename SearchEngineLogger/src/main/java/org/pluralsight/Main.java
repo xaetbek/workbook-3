@@ -1,6 +1,5 @@
 package org.pluralsight;
 
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
