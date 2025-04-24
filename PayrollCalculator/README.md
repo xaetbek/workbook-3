@@ -8,7 +8,7 @@ The **PayrollCalculator** is a Java console application designed to read employe
 
 ## 📂 Project Structure
 
-- **Main Class**: `PayrollCalculator`
+- **Main Class**: `Main`
 - **Model Class**: `Employee`
 - **Input File Format**: `id|name|hours-worked|pay-rate`
 - **Example Data**:
